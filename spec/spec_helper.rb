@@ -1,5 +1,7 @@
 require 'formulator'
 #require 'supermodel'
+#require 'minitest/spec'
+#require 'minitest/autorun'
 
 module FormulatorHelpers
   class Calculator < Formulator::FormulaProcessor
@@ -58,7 +60,7 @@ module FormulatorHelpers
       values[key] = val if val
       values[key]
     end
-    calc
+    [calc, values]
   end
 
 end
