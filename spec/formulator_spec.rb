@@ -67,6 +67,7 @@ describe Formulator::FormulaProcessor do
     it "can compare numbers using if statement with two branches" do
       c.eval("if(4 lt 2, 1, -1 )").should eq(-1)
     end
+
   end
 
   describe "memoizable #eval" do
