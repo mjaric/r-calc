@@ -1,19 +1,19 @@
-require 'formulator/parse_token'
-require 'formulator/operator'
-require 'formulator/unary_operator'
-require 'formulator/binary_operator'
-require 'formulator/binary_or_unary_operator'
-require 'formulator/function'
-require 'formulator/pusher'
-require 'formulator/popper'
-require 'formulator/separator'
-require 'formulator/identifier'
-require 'formulator/literal'
-require 'formulator/operator_list'
-require 'formulator/parse_token'
+require 'r_calc/parse_token'
+require 'r_calc/operator'
+require 'r_calc/unary_operator'
+require 'r_calc/binary_operator'
+require 'r_calc/binary_or_unary_operator'
+require 'r_calc/function'
+require 'r_calc/pusher'
+require 'r_calc/popper'
+require 'r_calc/separator'
+require 'r_calc/identifier'
+require 'r_calc/literal'
+require 'r_calc/operator_list'
+require 'r_calc/parse_token'
 
 
-module Formulator
+module RCalc
 # An expression processor.  This class can be derived to process many types of
 # expressions.  The modules defined below can be included in a derived class to
 # support popular sets of operations, or you can define your own.

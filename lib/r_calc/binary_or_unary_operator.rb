@@ -1,6 +1,6 @@
-require 'formulator/operator'
+require 'r_calc/operator'
 
-class Formulator::BinOrUnOperator < ::Formulator::Operator
+class RCalc::BinOrUnOperator < ::RCalc::Operator
   private
   def initialize(symbol, priority)
     super(symbol, 1, 2, priority)

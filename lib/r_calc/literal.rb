@@ -1,8 +1,8 @@
-require 'formulator/formula_expression_exception'
-require 'formulator/parse_token'
+require 'r_calc/formula_expression_exception'
+require 'r_calc/parse_token'
 # A literal value
 
-class Formulator::Literal < Formulator::ParseToken
+class RCalc::Literal < RCalc::ParseToken
   attr_reader :value # Just like an Identifier, we can get the
                      # value using the 'value' property, even
                      # though the implementation has nothing in common.
@@ -12,7 +12,7 @@ class Formulator::Literal < Formulator::ParseToken
                      # in every sense of the word).
   private
   def initialize(value)
-    super(value, ::Formulator::ParseToken::PARSE_VALUE) # Note we use the value itself as the symbol
+    super(value, ::RCalc::ParseToken::PARSE_VALUE) # Note we use the value itself as the symbol
     @value = value
   end
 
@@ -20,6 +20,6 @@ class Formulator::Literal < Formulator::ParseToken
                      # We could have left out the following method, but our version gives a better error
                      # messsage than the default "method missing value=".
   def value=(newvalue) # Assign a value
-    raise(::Formulator::FormulaExpressionException, "Writing into a literal") # Not!
+    raise(::RCalc::FormulaExpressionException, "Writing into a literal") # Not!
   end
 end

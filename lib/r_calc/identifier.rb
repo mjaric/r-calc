@@ -1,12 +1,12 @@
-require 'formulator/parse_token'
+require 'r_calc/parse_token'
 
 # A token that presumably references a variable of some sort
 # This class demonstrates calling a code block from a saved reference to it.
 
-class Formulator::Identifier < Formulator::ParseToken
+class RCalc::Identifier < RCalc::ParseToken
   private
   def initialize(name, proc)
-    super(name, ::Formulator::ParseToken::PARSE_VALUE) # Note we use the name as the symbol
+    super(name, ::RCalc::ParseToken::PARSE_VALUE) # Note we use the name as the symbol
     @proc = proc # proc is a code block for evaluating the symbol
   end
 

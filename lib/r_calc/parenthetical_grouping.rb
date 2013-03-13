@@ -1,7 +1,7 @@
-require 'formulator/pusher'
-require 'formulator/popper'
+require 'r_calc/pusher'
+require 'r_calc/popper'
 
-module Formulator
+module RCalc
 
 # Mix-ins for the usual operations.  See ExpressionProcessor#initialize for how
 # these "AddOperator_" methods get invoked.
@@ -12,8 +12,8 @@ module Formulator
 
       # Define "(" and ")" as our grouping operators
 
-      @operators << ::Formulator::Pusher.new("(")
-      @operators << ::Formulator::Popper.new(")")
+      @operators << ::RCalc::Pusher.new("(")
+      @operators << ::RCalc::Popper.new(")")
     end
   end
 

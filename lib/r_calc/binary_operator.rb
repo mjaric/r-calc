@@ -1,7 +1,7 @@
-require 'formulator/operator'
+require 'r_calc/operator'
 
 # An operator that takes two operands
-class Formulator::BinaryOperator < ::Formulator::Operator
+class RCalc::BinaryOperator < ::RCalc::Operator
 
   private
   def initialize(symbol, priority)

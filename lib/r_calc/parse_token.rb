@@ -1,7 +1,7 @@
 =begin
 Any token we might encounter in the expression
 =end
-class Formulator::ParseToken
+class RCalc::ParseToken
   public
   # values for parseAction (what to do when we encounter this token):
   PARSE_VALUE = 0 # A literal or an identifier (stack it)

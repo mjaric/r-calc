@@ -1,10 +1,10 @@
 # encoding: utf-8
 require 'spec/spec_helper'
 
-describe Formulator::FormulaProcessor do
+describe RCalc::FormulaProcessor do
 
   RSpec.configure do |c|
-    c.include FormulatorHelpers
+    c.include RCalcHelpers
   end
 
   let :c do
@@ -75,6 +75,11 @@ describe Formulator::FormulaProcessor do
       calc, memo = calculator
       calc.eval("number=12*3").should eq(36)
       memo["number"].should eq(36)
+    end
+    it "can memoize variables and it can be reused later in next step formula" do
+      calc, memo = calculator
+      calc.eval("number=12*3")
+      calc.eval("number * 10").should eq(360)
     end
 
     it "can memoize last value sing $" do

@@ -1,18 +1,18 @@
-require 'formulator'
+require 'r_calc'
 #require 'supermodel'
 #require 'minitest/spec'
 #require 'minitest/autorun'
 
-module FormulatorHelpers
-  class Calculator < Formulator::FormulaProcessor
+module RCalcHelpers
+  class Calculator < RCalc::FormulaProcessor
     # Let's just add all of the usual operators
 
-    include ::Formulator::ParentheticalGrouping # ()
-    include ::Formulator::AssignmentOperator # =
-    include ::Formulator::LastResultOperator # $
-    include ::Formulator::ArithmeticOperators # +-*/%^
-    include ::Formulator::BooleanOperators # true false and or eq ne gt lt ge le not
-    include ::Formulator::FunctionOperators # sum(), max(), min()
+    include ::RCalc::ParentheticalGrouping # ()
+    include ::RCalc::AssignmentOperator # =
+    include ::RCalc::LastResultOperator # $
+    include ::RCalc::ArithmeticOperators # +-*/%^
+    include ::RCalc::BooleanOperators # true false and or eq ne gt lt ge le not
+    include ::RCalc::FunctionOperators # sum(), max(), min()
     # example of adding custom operators
 
     def AddOperators_custom
@@ -22,8 +22,8 @@ module FormulatorHelpers
 
       # Now let's show how you can use a function to access a constant, like PI
 
-      @operators << ::Formulator::BinaryOperator.new("[", 3) {|x, y| x.value + y.value}
-      @operators << ::Formulator::UnaryOperator.new("]", 4) { |x| x.value }
+      @operators << ::RCalc::BinaryOperator.new("[", 3) {|x, y| x.value + y.value}
+      @operators << ::RCalc::UnaryOperator.new("]", 4) { |x| x.value }
 
     end
   end

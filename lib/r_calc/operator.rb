@@ -1,16 +1,16 @@
-require 'formulator/parse_token'
+require 'r_calc/parse_token'
 
 
 =begin
 An operator (or function identifier)
 =end
-class Formulator::Operator < Formulator::ParseToken
+class RCalc::Operator < RCalc::ParseToken
   attr_reader :proc, :minarg, :maxarg, :priorityProc
   attr_writer :priorityProc
 
   private
   def initialize(symbol, minarg, maxarg, priority, &proc)
-    super(symbol, Formulator::ParseToken::PARSE_OP)
+    super(symbol, RCalc::ParseToken::PARSE_OP)
     @minarg = minarg # minimum number of operands
     @maxarg = maxarg # maximum number of operands
     @priority = priority # operator precedence (0 = low .. 5 = high)

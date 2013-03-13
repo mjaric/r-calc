@@ -1,8 +1,8 @@
-require 'formulator/binary_operator'
-require 'formulator/binary_or_unary_operator'
+require 'r_calc/binary_operator'
+require 'r_calc/binary_or_unary_operator'
 
 # Arithmetic operators + - * / % ^
-module Formulator
+module RCalc
   module ArithmeticOperators
     def AddOperators_Arithmetic
 

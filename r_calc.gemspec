@@ -1,5 +1,5 @@
 # -*- encoding: utf-8 -*-
-require File.expand_path('../lib/formulator/version', __FILE__)
+require File.expand_path('../lib/r_calc/version', __FILE__)
 
 Gem::Specification.new do |gem|
   gem.authors = ["Milan Jaric"]
@@ -11,9 +11,9 @@ Gem::Specification.new do |gem|
   gem.files = `git ls-files`.split($\)
   gem.executables = gem.files.grep(%r{^bin/}).map { |f| File.basename(f) }
   gem.test_files = gem.files.grep(%r{^(test|spec|features)/})
-  gem.name = "formulator"
+  gem.name = "r_calc"
   gem.require_paths = ["lib"]
-  gem.version = Formulator::VERSION
+  gem.version = RCalc::VERSION
 
   gem.add_development_dependency "rake"
   gem.add_development_dependency "rspec"
