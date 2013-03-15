@@ -20,11 +20,8 @@ Or install it yourself as:
 
 To use this gem, after including this could be minimum of required code to run calculation:
 
-`
+```ruby
 require 'r_calc'
-#require 'supermodel'
-#require 'minitest/spec'
-#require 'minitest/autorun'
 
 module RCalcHelpers
   class Calculator < RCalc::FormulaProcessor
@@ -63,7 +60,7 @@ module RCalcHelpers
   end
 
 end
-`
+```
 
 ## Contributing
 
