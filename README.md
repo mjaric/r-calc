@@ -48,19 +48,38 @@ module RCalcHelpers
     end
   end
 
-  def calculator
-
-
-    values = Hash.new
-    calc = Calculator.new do |key, val|
-      values[key] = val if val
-      values[key]
-    end
-    [calc, values]
-  end
-
 end
 ```
+
+After you customizaed your calculator, next in your code you can inicialize it and use it like below:
+```ruby
+# storing [var,values] pair in hash
+values = Hash.new
+# make instance of your calculator
+calc = Calculator.new do |key, val|
+  values[key] = val if val
+  values[key]
+end
+
+calc.eval("var1 = 12 * 12")
+calc.eval("var2 = 100 * 2")
+
+puts "total is = #{calc.eval("sum(var1, var2)")}"
+# output should be: 
+# total is = 344
+
+```
+
+Don't worry about eval, it is not evail :) the method is overwriten in parent class and will use lexical parser to build formula bevore execute it. So in case you write:
+
+```ruby
+# try to call unix ls command
+calc.eval("system('ls')")
+
+```
+
+It will throw error since token is not recognised. Of course, you can implement custom gramar and include it in your calculator so it reconise system token as some function which assepts numbers and do some neath calculation
+
 
 ## Contributing
 
