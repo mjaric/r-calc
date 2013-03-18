@@ -17,10 +17,10 @@ Gem::Specification.new do |gem|
 
   gem.add_development_dependency "rake"
   gem.add_development_dependency "rspec"
-  gem.add_development_dependency "ZenTest"
-  gem.add_development_dependency "autotest-fsevent"
-  gem.add_development_dependency "autotest-growl"
-  gem.add_development_dependency "minitest"
-  gem.add_development_dependency "minitest-spec"
+  #gem.add_development_dependency "ZenTest"
+  #gem.add_development_dependency "autotest-fsevent"
+  #gem.add_development_dependency "autotest-growl"
+  #gem.add_development_dependency "minitest"
+  #gem.add_development_dependency "minitest-spec"
   #gem.add_development_dependency "supermodel"
 end
