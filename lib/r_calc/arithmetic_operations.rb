@@ -1,8 +1,9 @@
 require 'r_calc/binary_operator'
 require 'r_calc/binary_or_unary_operator'
 
-# Arithmetic operators + - * / % ^
+
 module RCalc
+  # Defines arithmetic operators ( + - * / % ^ )
   module ArithmeticOperators
     def AddOperators_Arithmetic
 
