@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email = ["milan.jaric@gmail.com"]
   gem.description = %q{Gem defines basic grammar for formula builder and ability to execute formulas to get it results or sum them.}
   gem.summary = %q{Sandboxed formula builder and evaluator (it is not evail ;) )}
-  gem.homepage = "https://github.com/mjaric/r_calc"
+  gem.homepage = "https://github.com/mjaric/r-calc"
 
   gem.files = `git ls-files`.split($\)
   gem.executables = gem.files.grep(%r{^bin/}).map { |f| File.basename(f) }
